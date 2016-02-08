@@ -34,7 +34,7 @@
 
             <?php if (count($project['tags']) > 0): ?>
             <ul class="list-unstyled tags">
-              <?php foreach(explode(',', $project['tags']) as $tag): ?><li class="tag"><?= $tag ?></li><?php endforeach; ?>
+              <?= render_project_tags($project) ?>
             </ul>
             <?php endif; ?>
 

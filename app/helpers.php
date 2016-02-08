@@ -26,3 +26,18 @@ function render_project_meta($project) {
   $p .= '</span>';
   return $p;
 }
+
+/**
+ * Creates the HTML for displaying a project's tags.
+ * @param $project array An array containing a project's information
+ * @return string An HTML string
+ */
+function render_project_tags($project) {
+  $p = '';
+
+  foreach(explode(',', $project['tags']) as $tag) {
+    $p .= '<li class="tag">' . $tag . '</li>';
+  }
+
+  return $p;
+}
