@@ -19,4 +19,4 @@ Database
 For the **Project** table, the following apply:
 
 * `date` should be a string in the format of `YYYY-MM-DD`. The day (`DD`) portion is ignored when rendered on the page, but could be used to fine-tune the ordering of projects
-* `tags` should be a comma-delimited string of tags, e.g. `python,flask`
+* `tags` should be a comma-delimited string of tags, e.g. `php,flightphp`
