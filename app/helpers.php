@@ -24,6 +24,7 @@ function render_project_meta($project) {
   $p .= '</h3><span class="date">';
   $p .= date('F Y', strtotime($project['date']));
   $p .= '</span>';
+
   return $p;
 }
 
