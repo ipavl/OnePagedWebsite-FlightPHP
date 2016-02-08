@@ -17,4 +17,32 @@
         </div>
       </div>
   </section>
+
+  <section class="row">
+    <div class="col-md-3">
+      <h2>Projects</h2>
+    </div>
+
+    <div class="col-md-9">
+      <?php foreach($projects as $project): ?>
+      <div class="project">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="meta">
+              <?= render_project_meta($project) ?>
+            </div>
+
+            <?php if (count($project['tags']) > 0): ?>
+            <ul class="list-unstyled tags">
+              <?php foreach(explode(',', $project['tags']) as $tag): ?><li class="tag"><?= $tag ?></li><?php endforeach; ?>
+            </ul>
+            <?php endif; ?>
+
+            <div class="description"><?= $project['description'] ?></div>
+          </div>
+        </div>
+      </div>
+      <?php endforeach; ?>
+    </div>
+  </section>
 </div>

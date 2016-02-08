@@ -10,3 +10,19 @@ Flight::map('render_page', function($page, $data = null, $key = null) {
 
   Flight::render('layouts/default', $data);
 });
+
+/**
+ * Creates the HTML for displaying a project's meta information (title/date).
+ * @param $project array An array containing a project's information
+ * @return string An HTML string
+ */
+function render_project_meta($project) {
+  $p = '<h3 class="title">';
+  !$project['link'] ?: $p .= '<a href="' . $project['link'] . '">';
+  $p .= $project['title'];
+  !$project['link'] ?: $p .= '</a>';
+  $p .= '</h3><span class="date">';
+  $p .= date('F Y', strtotime($project['date']));
+  $p .= '</span>';
+  return $p;
+}
